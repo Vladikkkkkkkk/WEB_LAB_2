@@ -110,13 +110,11 @@ body, html {
 .sub-content {
     grid-area: main;
     background-color: white;
-    display: grid;
     place-items: center;
     text-align: center;
-    height: 100%;
 }
 
-.sub-content h3, .sub-content p {
-    margin: 0;
+.sub-content {
+    margin-top: 21vh;
     padding: 0;
 }
