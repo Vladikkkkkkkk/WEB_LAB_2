@@ -9,12 +9,12 @@ body, html {
 .container {
     display: grid;
     grid-template-areas:
-        "header header side"
+        "header header header"
         "mainleft top side"
         "mainleft main side"
         "footer footer footer";
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto 100px 1fr 100px;
+    grid-template-rows: 100px auto 1fr 100px;
     height: 100vh;
 }
 
@@ -27,6 +27,7 @@ body, html {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    z-index: 2;
 }
 
 .left-text {
@@ -34,7 +35,7 @@ body, html {
     padding: 0 10px;
     font-size: 10px;
     text-align: left;
-    width: 40%;
+    width: 25%;
 }
 
 .header-right-corner {
@@ -67,6 +68,9 @@ body, html {
     padding: 20px;
     display: grid;
     place-items: center end;
+    grid-row: 1 / span 3;
+    grid-column: 3;
+    z-index: 1;
 }
 
 .navigation ul {
@@ -90,7 +94,7 @@ body, html {
     grid-area: mainleft;
     background-color: peachpuff;
     padding: 20px;
-    display:grid;
+    display: grid;
     place-items: center;
     text-align: center;
 }
@@ -112,9 +116,6 @@ body, html {
     background-color: white;
     place-items: center;
     text-align: center;
-}
-
-.sub-content {
     margin-top: 21vh;
     padding: 0;
 }
